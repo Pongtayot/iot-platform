@@ -1,0 +1,18 @@
+@base_url = http://localhost
+
+@port = 8085
+
+@url = {{base_url}}:{{port}}  
+
+@client_api = {{url}}/client
+
+POST {{client_api}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "ip_address": "192.168.0.1",
+  "node_name": "room"
+}
+
+###
+GET {{client_api}} HTTP/1.1

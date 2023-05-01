@@ -1,0 +1,35 @@
+@base_url = http://localhost
+
+@port = 8085
+
+@url = {{base_url}}:{{port}}
+
+@account_api = {{url}}/account
+
+@bearerToken = Bearer {{login.response.body.token}}
+
+###
+POST {{account_api}}/register HTTP/1.1
+Authorization: {{bearerToken}}
+Content-Type: application/json
+
+{
+    "username":"admin2",
+    "password":"12345"
+}
+
+###
+
+# @name login
+POST {{account_api}}/login HTTP/1.1
+Content-Type: application/json 
+
+{
+    "username":"admin",
+    "password":"12345"
+}
+
+###
+
+GET {{account_api}}/info HTTP/1.1
+Authorization: {{bearerToken}}

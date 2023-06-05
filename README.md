@@ -48,3 +48,6 @@ To install and run the IoT Platform Backend locally, follow these steps:
    ```
 
    The server will start running on `http://localhost:8085`.
+   
+## Credit
+Pongtayot W. - Developer

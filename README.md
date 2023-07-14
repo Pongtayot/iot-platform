@@ -32,7 +32,7 @@ To install and run the IoT Platform Backend locally, follow these steps:
 
    ```bash
    cd iot-platform-backend
-   yarn
+   node server.js
    ```
 
 3. Set up the environment variables:
